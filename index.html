@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-sacle=1.0,minimum-scale=1.0,user-scalable=no" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div class="lodingBox">
+			<p class="loading"></p>
+		</div>
+		<div class="nav-head">
+			<a><img class="nav-logo" src="img/logo-min.png" /></a>
+			<ul class="nav">
+				<li class="nav-li  activeli" data-menuanchor='page1'><a href="index.html"> 成品列表</a></li>
+				<li class="nav-li" data-menuanchor='page2'><a href="progress.html"> 进度列表</a></li>
+			</ul>
+		</div>
+
+		<div id="fullPage">
+			<div class="section">
+				<div class=" section1">
+					<div class="edit-pro-container" style="display:block ;">
+						<div class="fixBtn"><a>点击添加</a></div>
+						<ul class="pro-list">
+							<li class="pro-list-item">
+								<div class="detail-block">
+									<img class="small-pro" src="img/pro1.png" />
+									<h4 class="tittle-box">
+										<p>1/60 PG GUNDAM BANSHEE NORN</p>
+										<span>2016-04-06 20:34</span>
+									</h4>
+								</div>
+								<div class="handle-block">
+									<a class="btn-check">查看</a>
+									<span></span>
+									<a class="btn-edit">编辑</a>
+									<span></span>
+									<a class="delete-list">删除</a>
+								</div>
+							</li>
+	
+							<li class="pro-list-item">
+								<div class="detail-block">
+									<img class="small-pro" src="img/pro1.png" />
+									<h4 class="tittle-box">
+										<p>1/60 PG GUNDAM BANSHEE NORN</p>
+										<span>2016-04-06 20:34</span>
+									</h4>
+								</div>
+								<div class="handle-block">
+									<a class="btn-check">查看</a>
+									<span></span>
+									<a class="btn-edit">编辑</a>
+									<span></span>
+									<a class="delete-list">删除</a>
+								</div>
+							</li>
+	
+							<li class="pro-list-item">
+								<div class="detail-block">
+									<img class="small-pro" src="img/pro1.png" />
+									<h4 class="tittle-box">
+										<p>1/60 PG GUNDAM BANSHEE NORN</p>
+										<span>2016-04-06 20:34</span>
+									</h4>
+								</div>
+								<div class="handle-block">
+									<a class="btn-check">查看</a>
+									<span></span>
+									<a class="btn-edit">编辑</a>
+									<span></span>
+									<a class="delete-list">删除</a>
+								</div>
+							</li>
+							<li class="pro-list-item">
+								<div class="detail-block">
+									<img class="small-pro" src="img/pro1.png" />
+									<h4 class="tittle-box">
+										<p>1/60 PG GUNDAM BANSHEE NORN</p>
+										<span>2016-04-06 20:34</span>
+									</h4>
+								</div>
+								<div class="handle-block">
+									<a class="btn-check">查看</a>
+									<span></span>
+									<a class="btn-edit">编辑</a>
+									<span></span>
+									<a class="delete-list">删除</a>
+								</div>
+							</li>
+							<li class="pro-list-item">
+								<div class="detail-block">
+									<img class="small-pro" src="img/pro1.png" />
+									<h4 class="tittle-box">
+										<p>1/60 PG GUNDAM BANSHEE NORN</p>
+										<span>2016-04-06 20:34</span>
+									</h4>
+								</div>
+								<div class="handle-block">
+									<a class="btn-check">查看</a>
+									<span></span>
+									<a class="btn-edit">编辑</a>
+									<span></span>
+									<a class="delete-list">删除</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="upload-pannel" style="display: none;">
+							<div class="upload-content">
+								<div class="input-tittle">
+									<input type="text" />
+								</div>
+								<div class="picture-wrap">
+									<ul class="picture-blcok">
+										<!--<li class="picture-items">
+											<div class="items-box">
+												<img class="upload-img" src="img/list-img-1.jpg" />
+												<div class="delete-lable"><a class="delete-btn">删除</a></div>
+											</div>
+											<p class="cover">封面</p>
+										</li>-->
+									</ul>
+									<p class="btn-upload">
+										<input class="upload" type="file" multiple="multiple" accept="image/*" />
+									</p>
+								</div>
+							</div>
+							<div class="save-block">
+								<a class="cancel">取消</a>
+								<a class="save">保存</a>
+							</div>
+					</div>
+					
+					
+					
+	
+	
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/iscroll-probe.js" ></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/loadimg.js"></script>
+		<script>
+		
+//		公共js
+			$('#fullPage').height($(window).height());
+			fullPage = new IScroll('#fullPage',{
+				mouseWheel: true,
+    			scrollbars: true
+			});
+			
+			
+			//获取URL
+			function getObjectURL(file) {
+				var url = null;
+				if (window.createObjectURL != undefined) { // basic
+					url = window.createObjectURL(file);
+				} else if (window.URL != undefined) { // mozilla(firefox)
+					url = window.URL.createObjectURL(file);
+				} else if (window.webkitURL != undefined) { // webkit or chrome
+					url = window.webkitURL.createObjectURL(file);
+				}
+				return url;
+			}
+			
+	
+	
+//			成品列表js
+
+			//点击添加
+			$('.fixBtn a').on('click', function() {
+				$('.edit-pro-container').hide();
+				$('.upload-pannel').show();
+				fullPage.refresh();
+			});
+			
+			//查看
+			$('.btn-check').on('click',function(){
+				
+			});
+			
+			//编辑
+			$('.btn-edit').on('click',function(){
+				$('.edit-pro-container').hide();
+				$('.upload-pannel').show();
+				/*
+				编辑列表
+				..........
+				
+				*/
+				
+				fullPage.refresh();
+			});
+			
+			//删除
+			$('.delete-list').on('click',function(){
+				$(this).parents('.pro-list-item').remove();
+				/*
+				删除列表
+				..........
+				
+				*/
+				fullPage.refresh();
+			})
+			//保存列表
+			$('.save').on('click', function() {
+				$('.edit-pro-container').show();
+				$('.upload-pannel').hide();
+				/*
+				保存列表
+				..........
+				
+				*/
+				fullPage.refresh();
+			});
+			//取消保存
+			$('.cancel').on('click', function() {
+				$('.edit-pro-container').show();
+				$('.upload-pannel').hide();
+				fullPage.refresh();
+			});
+			//点击上传图片
+			$(".upload").on("change", function() {
+					var files = $(this)[0].files;
+					var length = files.length;
+					for (var i = 0; i < length; i++) {
+						var urls = getObjectURL(files[i]);
+						var lis = $('<li class="picture-items"></li>').appendTo($('.picture-blcok'));
+						var itemsBox = $('<div class="items-box"></div>').appendTo(lis);
+						$('<img class="upload-img" src=' + urls + ' />').appendTo(itemsBox);
+						$('<div class="delete-lable"><a class="delete-btn">删除</a></div>').appendTo(itemsBox);
+						$('<p class="cover">封面</p>').appendTo(lis);
+					}
+					//		alert($(this).val())
+					$(this).val("");
+					$(".upload-img").imgLoad({
+						time: 10000000, //设置足够大 须等待图片载入完成，但是404的时候就杯具了...  
+						callback: function() {
+							fullPage.refresh();
+						}
+					});
+					fullPage.refresh();
+				})
+				
+			$(".picture-blcok").on("click", ".delete-btn", function() {
+				$(this).parents('.picture-items').remove();
+				fullPage.refresh();
+			});
+			
+			
+		</script>
+	</body>
+
+</html>
